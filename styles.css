@@ -446,3 +446,27 @@ h3 {
   color: var(--ink);
   line-height: 1.35;
 }
+
+
+.trust-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+  max-width: 42rem;
+}
+.trust-list li {
+  margin: 0;
+  padding: 0.95rem 1.1rem;
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.trust-list strong {
+  color: var(--ink);
+  font-weight: 600;
+}

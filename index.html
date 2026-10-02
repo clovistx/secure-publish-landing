@@ -64,7 +64,7 @@
       <div class="container hero__grid">
         <div class="hero__copy">
           <p class="eyebrow"><span class="eyebrow__dot"></span>securepublish.work</p>
-          <p class="hero__category">For teams that share AI dashboards</p>
+          <p class="hero__category">For teams that ship AI dashboards and need company-only access.</p>
           <h1>Share AI dashboards<br /><em>behind SSO</em></h1>
           <p class="hero__lede">
             Install the Secure Publish skill — your agent publishes the dashboard and only signed-in teammates can open it.
@@ -196,7 +196,7 @@
             <h3>See the example dashboard</h3>
             <p>
               Open <strong>Painel Vendas Q3</strong> — sample AI HTML content.
-              In the live product this sits behind company SSO; here you see the dashboard itself for demo.
+              This sample HTML is public on purpose; the real product requires login.
             </p>
           </div>
           <a href="examples/panel-vendas.html" class="btn btn--ghost btn--lg">See example</a>
@@ -227,27 +227,14 @@
           <p class="eyebrow">Trust cues</p>
           <h2>What you can count on</h2>
           <p class="section__lede">
-            Honest product capabilities — no fake logos, no invented metrics, no absolute security guarantees.
+            How auth works — and what we explicitly do not claim. No fake logos, no invented metrics.
           </p>
         </div>
-        <div class="trust-badges">
-          <div class="badge">
-            <span class="badge__label">Behind SSO</span>
-            <span class="badge__desc">Company login before content</span>
-          </div>
-          <div class="badge">
-            <span class="badge__label">No loose public file</span>
-            <span class="badge__desc">Access refused without login</span>
-          </div>
-          <div class="badge">
-            <span class="badge__label">Skill for agents</span>
-            <span class="badge__desc">Install once, publish with the agent</span>
-          </div>
-          <div class="badge">
-            <span class="badge__label">Signed-in access</span>
-            <span class="badge__desc">Designed for company SSO</span>
-          </div>
-        </div>
+        <ul class="trust-list">
+          <li><strong>Company login before anyone opens it</strong> — authentication is checked before content is served.</li>
+          <li><strong>No loose file on the open web</strong> — visitors without a session don’t get the asset.</li>
+          <li><strong>What we don’t claim</strong> — not compliance, not end-to-end encryption, not “impossible to leak.”</li>
+        </ul>
       </div>
     </section>
 
