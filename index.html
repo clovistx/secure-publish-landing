@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Secure Publish — AI dashboard publishing with an SSO gate. Publish AI HTML panels behind SSO without leaving the file loose on the open web." />
+  <meta name="theme-color" content="#FAF8F5" />
+  <title>Secure Publish — AI dashboard publishing with an SSO gate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="logo" aria-label="Secure Publish home">
+        <span class="logo__mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.75"/>
+            <path d="M7 11V8a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+            <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo__text">Secure Publish</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#pain">Problem</a>
+        <a href="#solution">How it works</a>
+        <a href="#trust">Trust</a>
+        <a href="#waitlist" class="btn btn--sm btn--primary">Early access</a>
+      </nav>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile" id="navToggle">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="navMobile" hidden>
+      <a href="#pain">Problem</a>
+      <a href="#solution">How it works</a>
+      <a href="#trust">Trust</a>
+      <a href="#waitlist">Early access</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>securepublish.work</p>
+          <p class="hero__category">AI dashboard publishing with an SSO gate</p>
+          <h1>Publish AI HTML panels<br /><em>behind SSO</em></h1>
+          <p class="hero__lede">
+            The point is the gate: publish AI HTML so only signed-in company users see it.
+            No loose public file — unauthenticated visitors are refused at the edge.
+          </p>
+          <div class="hero__actions">
+            <a href="#waitlist" class="btn btn--primary btn--lg">Request early access</a>
+            <a href="#how" class="btn btn--ghost btn--lg">How it works</a>
+          </div>
+          <p class="hero__note">Waitlist open · SSO in production coming soon</p>
+        </div>
+
+        <div class="hero__visual">
+          <div class="panel-mock" role="img" aria-label="Illustration of an SSO-gated panel for Painel Vendas Q3">
+            <div class="panel-mock__chrome">
+              <div class="panel-mock__dots"><span></span><span></span><span></span></div>
+              <div class="panel-mock__url">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                  <path d="M7 11V8a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>securepublish.work/panel-vendas</span>
+              </div>
+            </div>
+            <div class="panel-mock__gate">
+              <div class="gate-card">
+                <div class="gate-card__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M7 11V8a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <h3>Sign in required</h3>
+                <p>This panel is gated by your company SSO. Guests without a valid session are refused.</p>
+                <div class="gate-card__btn">Continue with SSO</div>
+                <p class="gate-card__meta">panel-vendas · Painel Vendas Q3</p>
+              </div>
+            </div>
+            <div class="panel-mock__blur" aria-hidden="true">
+              <div class="fake-chart fake-chart--a"></div>
+              <div class="fake-chart fake-chart--b"></div>
+              <div class="fake-rows"><div></div><div></div><div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pain">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">The problem</p>
+          <h2>AI generates panels.<br />Sharing still leaks.</h2>
+          <p class="section__lede">
+            Models spit out dashboards, static sites, and analyses every day.
+            Teams still drop them into Drive, Notion, or a public URL — and the share path becomes the leak.
+          </p>
+        </div>
+        <div class="pain-grid">
+          <article class="card">
+            <div class="card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Drive &amp; Notion sprawl</h3>
+            <p>HTML panels become attachments or weak previews. Permissions drift. Reviewers can’t tell what’s current or who can open it.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Public links leak</h3>
+            <p>Anyone with the link can view the panel. A Slack forward is enough — the URL alone is the leak.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M3 9h18M9 4v16" stroke="currentColor" stroke-width="1.75"/></svg>
+            </div>
+            <h3>AI panels need a gate</h3>
+            <p>Access or VPN covers internal apps. Here the job is fast CLI publish of the HTML the AI just generated — as a gated page, not a loose file.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="solution">
+      <div class="container">
+        <div class="section__head" id="how">
+          <p class="eyebrow">The product</p>
+          <h2>CLI publish. Edge SSO gate.<br />Share only with signed-in users.</h2>
+          <p class="section__lede">
+            Secure Publish wraps your HTML panel so authentication is checked before content is served.
+            No loose public file for unauthenticated visitors.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">01</div>
+            <div class="step__body">
+              <h3>Publish with the CLI</h3>
+              <p>Point the CLI at your AI-generated HTML panel and ship it in one command. Proof anchor: <code>panel-vendas</code> — Painel Vendas Q3.</p>
+              <pre class="code-block" tabindex="0"><code><span class="c-muted">$</span> panel-gate publish ./painel-vendas-q3.html --title "Painel Vendas Q3"</code></pre>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">02</div>
+            <div class="step__body">
+              <h3>SSO gate at the edge</h3>
+              <p>Requests without a valid company session are refused before HTML is served. The URL alone is not enough.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">03</div>
+            <div class="step__body">
+              <h3>Share with your team</h3>
+              <p>Send the panel URL to colleagues. Authenticated users see the dashboard; everyone else hits the gate — not a public file.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proof-strip">
+          <div class="proof-strip__copy">
+            <p class="proof-strip__label">Proof</p>
+            <h3>See the example panel</h3>
+            <p>
+              Open <strong>Painel Vendas Q3</strong> — sample AI HTML content.
+              In the live product this would sit behind the SSO gate; here you see the panel itself, ungated, for demo.
+            </p>
+          </div>
+          <a href="examples/panel-vendas.html" class="btn btn--ghost btn--lg">See example</a>
+        </div>
+
+        <div class="feature-row">
+          <article class="feature">
+            <h3>Built for AI HTML panels</h3>
+            <p>Dashboards and analyses from Cursor, Claude, ChatGPT, and similar tools — drop in static HTML and publish.</p>
+          </article>
+          <article class="feature">
+            <h3>No loose public file</h3>
+            <p>Unauthenticated visitors don’t get the asset. The edge refuses access instead of exposing an open link.</p>
+          </article>
+          <article class="feature">
+            <h3>Designed for signed-in company access</h3>
+            <p>Edge SSO check before content — product capability, not a certification claim.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Trust cues</p>
+          <h2>What you can count on</h2>
+          <p class="section__lede">
+            Honest product capabilities — no fake logos, no invented metrics, no absolute security guarantees.
+          </p>
+        </div>
+        <div class="trust-badges">
+          <div class="badge">
+            <span class="badge__label">SSO gate</span>
+            <span class="badge__desc">Edge check before content</span>
+          </div>
+          <div class="badge">
+            <span class="badge__label">No loose public file</span>
+            <span class="badge__desc">Unauthenticated refused</span>
+          </div>
+          <div class="badge">
+            <span class="badge__label">CLI publish</span>
+            <span class="badge__desc">Ship AI HTML in one command</span>
+          </div>
+          <div class="badge">
+            <span class="badge__label">Signed-in access</span>
+            <span class="badge__desc">Designed for company SSO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cta" id="waitlist">
+      <div class="container">
+        <div class="cta-panel">
+          <div class="cta-panel__copy">
+            <p class="eyebrow">Early access</p>
+            <h2>Join the waitlist</h2>
+            <p>
+              SSO in production isn’t fully live yet. Request early access — we’ll reach out when Secure Publish is ready for your team.
+              This is not “ship to production today.”
+            </p>
+          </div>
+          <form class="waitlist-form" id="waitlistForm" novalidate>
+            <label class="sr-only" for="email">Work email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" inputmode="email" aria-describedby="formHint" />
+            <button type="submit" class="btn btn--primary btn--lg">Request early access</button>
+            <p class="form-hint" id="formHint" role="status" aria-live="polite"></p>
+          </form>
+          <div class="waitlist-success" id="waitlistSuccess" hidden>
+            <div class="success-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>You’re on the list</h3>
+            <p>Thanks — we’ll email you when early access opens. No spam, just the invite.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.75"/>
+            <path d="M7 11V8a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+            <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span>Secure Publish</span>
+      </div>
+      <p class="footer__domain">securepublish.work</p>
+      <p class="footer__copy">&copy; <span id="year"></span> Secure Publish. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
