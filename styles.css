@@ -413,3 +413,36 @@ h3 {
 .footer__brand .logo__mark { color: var(--sage); }
 .footer__domain { font-family: var(--mono); font-size: 0.78rem; margin: 0; }
 .footer__copy { margin: 0; }
+
+
+.install-example {
+  margin-top: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+.install-example__label {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.install-example .code-block { margin: 0; }
+.install-example__then {
+  margin: 0.7rem 0 0.25rem;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+.install-example__prompt {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 550;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.35;
+}
