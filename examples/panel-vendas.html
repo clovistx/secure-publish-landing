@@ -43,10 +43,20 @@
     th { background: #f1f5f9; color: #475569; font-weight: 600; }
     tr:last-child td { border-bottom: none; }
   </style>
+  <script>
+    (function () {
+      try {
+        if (sessionStorage.getItem("sp-demo-auth") === "1") return;
+      } catch (e) {}
+      var q = new URLSearchParams(window.location.search);
+      var lang = q.get("lang") === "pt" ? "?lang=pt" : "";
+      window.location.replace("demo-auth.html" + lang);
+    })();
+  </script>
 </head>
 <body>
   <h1>Painel de Vendas — Q3</h1>
-  <p class="sub">Demo gerado por IA · protegido pelo Secure Publish (demo)</p>
+  <p class="sub">Demo gerado por IA · você passou pela tela “Continuar como …” (simulação)</p>
   <div class="grid">
     <div class="card">
       <div class="label">Receita</div>

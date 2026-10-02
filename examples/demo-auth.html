@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure Publish — flow demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,550;9..144,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #FAF8F5;
+      --cream-2: #F3EFE9;
+      --stone: #E8E2D9;
+      --ink: #292524;
+      --ink-soft: #57534E;
+      --muted: #78716C;
+      --sage: #5F7A61;
+      --sage-hover: #4E6650;
+      --sage-soft: #E8F0E9;
+      --white: #FFFEFC;
+      --display: "Fraunces", Georgia, serif;
+      --sans: "DM Sans", system-ui, sans-serif;
+      --shadow: 0 1px 2px rgba(41,37,36,0.04), 0 8px 24px rgba(41,37,36,0.05);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; min-height: 100dvh; }
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    .banner {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+      background: var(--ink);
+      color: var(--cream);
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      padding: 0.55rem 1rem;
+      line-height: 1.35;
+    }
+    .wrap {
+      width: min(100%, 420px);
+      margin-top: 2.5rem;
+    }
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--sage);
+      text-align: center;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 1.5rem 1.35rem 1.35rem;
+    }
+    .card h1 {
+      font-family: var(--display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.4rem;
+      text-align: center;
+      line-height: 1.25;
+    }
+    .card .lede {
+      margin: 0 0 1.25rem;
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .account {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--stone);
+      border-radius: 10px;
+      background: var(--cream);
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      text-align: left;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .account:hover, .account:focus-visible {
+      border-color: var(--sage);
+      background: var(--sage-soft);
+      outline: none;
+    }
+    .avatar {
+      flex: 0 0 auto;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 999px;
+      background: var(--sage);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .account__text { min-width: 0; flex: 1; }
+    .account__name {
+      font-weight: 600;
+      font-size: 0.98rem;
+      margin: 0;
+    }
+    .account__email {
+      margin: 0.15rem 0 0;
+      font-size: 0.85rem;
+      color: var(--muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .account__cta {
+      flex: 0 0 auto;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--sage);
+    }
+    .meta {
+      margin: 1rem 0 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .back {
+      display: block;
+      margin: 1.1rem auto 0;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--sage);
+      text-decoration: none;
+    }
+    .back:hover { color: var(--sage-hover); text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <p class="banner" id="banner">Flow demo · not real Google login</p>
+  <div class="wrap">
+    <p class="eyebrow" id="eyebrow">Secure Publish</p>
+    <div class="card">
+      <h1 id="title">Sign in to open this dashboard</h1>
+      <p class="lede" id="lede">Painel Vendas Q3 · company login required before content is served.</p>
+      <button type="button" class="account" id="continueBtn">
+        <span class="avatar" aria-hidden="true">AR</span>
+        <span class="account__text">
+          <p class="account__name">Alex Rivera</p>
+          <p class="account__email">alex@acme.example</p>
+        </span>
+        <span class="account__cta" id="ctaShort">Continue</span>
+      </button>
+      <p class="meta" id="meta">Example account for this demo. One click — no password.</p>
+    </div>
+    <a class="back" id="back" href="../">← Back to Secure Publish</a>
+  </div>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var isPt = params.get("lang") === "pt";
+      if (isPt) {
+        document.documentElement.lang = "pt-BR";
+        document.title = "Secure Publish — demo do fluxo";
+        document.getElementById("banner").textContent =
+          "Demo do fluxo · não é login Google de verdade";
+        document.getElementById("title").textContent =
+          "Entre para abrir este dashboard";
+        document.getElementById("lede").textContent =
+          "Painel Vendas Q3 · login da empresa obrigatório antes de servir o conteúdo.";
+        document.getElementById("ctaShort").textContent = "Continuar";
+        document.getElementById("meta").textContent =
+          "Conta de exemplo nesta demo. Um clique — sem senha.";
+        document.getElementById("back").textContent = "← Voltar ao Secure Publish";
+        document.getElementById("back").href = "../pt/";
+        document.getElementById("continueBtn").setAttribute(
+          "aria-label",
+          "Continuar como Alex Rivera"
+        );
+      } else {
+        document.getElementById("continueBtn").setAttribute(
+          "aria-label",
+          "Continue as Alex Rivera"
+        );
+      }
+
+      document.getElementById("continueBtn").addEventListener("click", function () {
+        try {
+          sessionStorage.setItem("sp-demo-auth", "1");
+        } catch (e) {}
+        window.location.href = "panel-vendas.html" + (isPt ? "?lang=pt" : "");
+      });
+    })();
+  </script>
+</body>
+</html>
