@@ -12,22 +12,25 @@
   var mobile = document.getElementById("navMobile");
 
   if (toggle && mobile) {
+    function setOpen(open) {
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      mobile.classList.toggle("is-open", open);
+      if (open) {
+        mobile.removeAttribute("hidden");
+      } else {
+        mobile.setAttribute("hidden", "");
+      }
+    }
+
     toggle.addEventListener("click", function () {
       var open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", open ? "false" : "true");
-      toggle.setAttribute("aria-label", open ? "Open menu" : "Close menu");
-      if (open) {
-        mobile.setAttribute("hidden", "");
-      } else {
-        mobile.removeAttribute("hidden");
-      }
+      setOpen(!open);
     });
 
     mobile.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Open menu");
-        mobile.setAttribute("hidden", "");
+        setOpen(false);
       });
     });
   }
