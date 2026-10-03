@@ -7,8 +7,8 @@
 
 ## Copy
 - Hero: Share AI dashboards behind SSO
-- Skill = primary path; CLI (`panel-gate publish`) secondary / advanced only
-- Ban marketing words: gate / gated (CLI binary name ok in advanced block)
+- Skill = primary path; CLI (`npx --yes github:clovistx/secure-publish publish …`) secondary / advanced only
+- Ban marketing words: gate / gated
 - Waitlist honesty: SSO in production coming soon
 - Languages: `index.html` (EN) + `pt/index.html` (PT-BR), shared CSS/JS
 
