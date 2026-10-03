@@ -7,8 +7,9 @@
 
 ## Copy
 - Hero: Share AI dashboards behind SSO
-- Skill = primary path; CLI (`npx --yes github:clovistx/secure-publish publish …`) secondary / advanced only
-- Ban marketing words: gate / gated
+- Skill = primary path; no CLI card on the landing (match securepublish.work)
+- Only copyable command: `npx skills add https://github.com/clovistx/secure-publish --skill "secure-publish"`
+- Ban marketing words: gate / gated; do not mention panel-gate or securepublish-cli
 - Waitlist honesty: SSO in production coming soon
 - Languages: `index.html` (EN) + `pt/index.html` (PT-BR), shared CSS/JS
 
